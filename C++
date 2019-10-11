@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+enum grade{freshman,sophomore,junior,senior};
+enum level{A,B,C,D};
+class Student{
+public:
+Student(unsigned number,grade Grade,level Level)
+:number(number),Grade(Grade),Level(Level){};
+void show();
+private:
+unsigned number;
+grade Grade;
+level Level;
+}
+void Student::show(){
+cout<<"Stu number is: "<<number<<endl;
+cout<<"Stu's grade is: ";
+switch(Grade){
+case freshman:cout<<"freshman";break;
+case sophomore:cout<<"sophomore";break;
+case junior:cout<<"junior";break;
+case senior:cout<<"senior";break;}
+cout<<endl;
+cout<<"Stu's level is: ";
+switch(Level){
+case A:cout<<'A';break;
+case B:cout<<‘B';break;
+case C:cout<<'C';break;
+case D:cout<<'D';break;}
+cout<<endl;}
+int main(){
+Student a(1,freshman,D);
+cout<<"Size of Stu"<<sizeof (student)<<endl;
+a.show();
+return 0}
+
